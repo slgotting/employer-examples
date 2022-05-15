@@ -1,0 +1,68 @@
+# the filename is what the output data file will be named
+
+requests_per_minute: 5
+
+default_parameter_values:
+  function: TIME_SERIES_INTRADAY
+  apikey: <your_api_key>
+  outputsize: full
+  interval: 30min
+  time_period: 30
+  series_type: close
+  fastlimit: 0.02
+  fastkperiod: 6
+  fastdmatype: 1
+  fastperiod: 10
+  matype: 1
+  timeperiod1: 8
+  nbdevup: 3
+  nbdevdn: 3
+  acceleration: 0.05
+  maximum: 0.25
+
+
+# EITHER include_functions or exclude_functions should be specified but not both. Will raise error if both specified
+# include_functions:
+#   - TIME_SERIES_INTRADAY
+#   - SMA
+#   - EMA
+
+# Takes from ALL_FUNCTIONS dictionary defined in endpoint_parameters.py
+# Premium included above TIME_SERIES_INTRADAY_EXTENDED
+exclude_functions:
+  - VWAP
+  - MACD
+  - BBANDS
+  - TIME_SERIES_INTRADAY_EXTENDED
+  - TIME_SERIES_DAILY
+  - TIME_SERIES_DAILY_ADJUSTED
+  - TIME_SERIES_WEEKLY
+  - TIME_SERIES_WEEKLY_ADJUSTED
+  - TIME_SERIES_MONTHLY
+  - TIME_SERIES_MONTHLY_ADJUSTED
+  - GLOBAL_QUOTE
+  - SYMBOL_SEARCH
+  - OVERVIEW
+  - EARNINGS
+  - INCOME_STATEMENT
+  - BALANCE_SHEET
+  - CASH_FLOW
+  - LISTING_STATUS
+  - EARNINGS_CALENDAR
+  - IPO_CALENDAR
+  - CURRENCY_EXCHANGE_RATE
+  - FX_INTRADAY
+  - FX_DAILY
+  - FX_WEEKLY
+  - FX_MONTHLY
+  - CURRENCY_EXCHANGE_RATE
+  - CRYPTO_RATING
+  - CRYPTO_INTRADAY
+  - DIGITAL_CURRENCY_DAILY
+  - DIGITAL_CURRENCY_WEEKLY
+  - DIGITAL_CURRENCY_MONTHLY
+
+# override default parameters here
+# parameter_overrides:
+  # SMA:
+  #   interval: 30min

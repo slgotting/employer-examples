@@ -1,0 +1,31 @@
+
+
+$background-levels: (
+    1: #fff,
+    2: #fff,
+    3: #fff,
+    4: #fff,
+);
+
+$background-levels-dark: (
+    1: #131A25,
+    2: #161F2C,
+    3: #1A2434,
+    4: #1E293B,
+);
+
+html {
+    @each $code, $color in $background-levels {
+        .bg-#{$code} {
+            background-color: #{$color};
+        }
+    }
+}
+
+html.dark {
+    @each $code, $color in $background-levels-dark {
+        .bg-#{$code} {
+            background-color: #{$color};
+        }
+    }
+}
