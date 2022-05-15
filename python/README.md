@@ -11,12 +11,12 @@ https://www.alphavantage.co/support/#
 
 Run script like so (using all absolute paths):
 
-`alpha-vantage/get-stock-data-for-symbol \
+alpha-vantage/get-stock-data-for-symbol \
 -c /home/steven/employer-examples/python/alpha-vantage/config/time_period_30.yml \
 -o /home/steven/employer-examples/python/alpha-vantage/data/time_period_30 \
 -s /home/steven/employer-examples/python/alpha-vantage/stock-list.txt \
 -i /home/steven/employer-examples/python/alpha-vantage/state/current_index.txt \
--l /home/steven/employer-examples/python/alpha-vantage/log.log`
+-l /home/steven/employer-examples/python/alpha-vantage/log.log
 
 I run it in my crontab like this (repeating a couple times to not hit my request limit):
 
