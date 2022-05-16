@@ -1,8 +1,5 @@
-I'm in the process of making this very nice and saving state after each request so that you can pick it back up
-anytime. But for now I made it so its simply run by using crontab commands that will keep me within API limits
-
 It uses the configuration file found in config directory to automatically assign defaults to arguments
-for scraping
+for querying
 
 The current index is just a text file with an index in it. Found at alpha-vantage/state/current_index.txt
 
@@ -11,12 +8,14 @@ https://www.alphavantage.co/support/#
 
 Run script like so (using all absolute paths):
 
+```
 alpha-vantage/get-stock-data-for-symbol \
 -c /home/steven/employer-examples/python/alpha-vantage/config/time_period_30.yml \
 -o /home/steven/employer-examples/python/alpha-vantage/data/time_period_30 \
 -s /home/steven/employer-examples/python/alpha-vantage/stock-list.txt \
 -i /home/steven/employer-examples/python/alpha-vantage/state/current_index.txt \
 -l /home/steven/employer-examples/python/alpha-vantage/log.log
+```
 
 I run it in my crontab like this (repeating a couple times to not hit my request limit):
 
